@@ -1,27 +1,27 @@
 # Test Driven Development Eğitim İçeriği ve Ders Programı
 
-## Test
-- [ ] Test Nedir?
-- [ ] Test türleri nelerdir?
-- [ ] Test piramidi
-- [ ] Test proje kalıpları
+## 11.11.2024
+- [x] Test Nedir?
+- [x] Test türleri nelerdir?
+- [x] Test piramidi
+- [x] Test proje kalıpları
+- [x] İlk testimizi yazalım
+- [x] Solution Structure
+- [x] Unit Test isimlendirme kuralları
+- [x] Arrange, Act, Assert
+- [x] Execution Model
+- [x] Test Setup ve Teardown
+- [x] Fluent Assertions
+- [x] String Test
+- [x] Number Test
+- [x] Date Test
+- [x] Throw Exception Test
 
 ## Unit Test
-- [ ] İlk testimizi yazalım
-- [ ] Solution Structure
-- [ ] Unit Test isimlendirme kuralları
-- [ ] Arrange, Act, Assert
-- [ ] Execution Model
-- [ ] Test Setup ve Teardown
 - [ ] Parameterizing Tests
 - [ ] Ignoring Tests
-- [ ] Fluent Assertions
-- [ ] String Test
-- [ ] Number Test
-- [ ] Date Test
 - [ ] Object Test
 - [ ] Enumerables Test
-- [ ] Throw Exception Test
 - [ ] Private ve Internal Metot Testi
 - [ ] NSubstitute
 - [ ] Moq vs NSubstitute
@@ -64,16 +64,6 @@
 - [ ] Dealing with background services
 - [ ] Integration testing minimal APIs
 - [ ] Dealing with Entity Framework
-
-## WebUI Testi
-- [ ] Projemizi oluşturalım
-- [ ] Playwright
-- [ ] Docker strategy
-- [ ] Create a resource
-- [ ] Get a resource
-- [ ] Getting all the resources
-- [ ] Update a resource
-- [ ] Delete a resource
 
 ## Test Driven Development
 

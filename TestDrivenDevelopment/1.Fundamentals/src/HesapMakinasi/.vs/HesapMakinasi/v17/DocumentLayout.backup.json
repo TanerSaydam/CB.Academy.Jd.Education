@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\HesapMakinasi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81BCFAAD-E345-4E40-8C72-2B92E5398B70}|..\\TestProject1\\HesapManinasi.Tests.UnitTest.csproj|c:\\cb.academy.jd.education\\testdrivendevelopment\\1.fundamentals\\testproject1\\calculateservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81BCFAAD-E345-4E40-8C72-2B92E5398B70}|..\\TestProject1\\HesapManinasi.Tests.UnitTest.csproj|c:\\cb.academy.jd.education\\testdrivendevelopment\\1.fundamentals\\testproject1\\hesapmaninasi.tests.unittest.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25CEEF88-7712-4D3A-A37C-62733A6A6BAA}|HesapMakinasi.csproj|c:\\cb.academy.jd.education\\testdrivendevelopment\\1.fundamentals\\hesapmakinasi\\calculateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25CEEF88-7712-4D3A-A37C-62733A6A6BAA}|HesapMakinasi.csproj|solutionrelative:calculateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HesapManinasi.Tests.UnitTest.csproj",
+              "DocumentMoniker": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\TestProject1\\HesapManinasi.Tests.UnitTest.csproj",
+              "RelativeDocumentMoniker": "..\\TestProject1\\HesapManinasi.Tests.UnitTest.csproj",
+              "ToolTip": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\TestProject1\\HesapManinasi.Tests.UnitTest.csproj",
+              "RelativeToolTip": "..\\TestProject1\\HesapManinasi.Tests.UnitTest.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-11T10:45:14.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculateServiceTest.cs",
+              "DocumentMoniker": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\TestProject1\\CalculateServiceTest.cs",
+              "RelativeDocumentMoniker": "..\\TestProject1\\CalculateServiceTest.cs",
+              "ToolTip": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\TestProject1\\CalculateServiceTest.cs",
+              "RelativeToolTip": "..\\TestProject1\\CalculateServiceTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T10:27:42.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculateService.cs",
+              "DocumentMoniker": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\HesapMakinasi\\CalculateService.cs",
+              "RelativeDocumentMoniker": "CalculateService.cs",
+              "ToolTip": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\1.Fundamentals\\HesapMakinasi\\CalculateService.cs",
+              "RelativeToolTip": "CalculateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T10:26:05.073Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

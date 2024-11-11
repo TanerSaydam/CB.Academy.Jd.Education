@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\2.Techniques\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{174F2E84-15F8-4489-AC50-C4A67DDC4043}|src\\TestingTechniques\\TestingTechniques.csproj|c:\\cb.academy.jd.education\\testdrivendevelopment\\2.techniques\\src\\testingtechniques\\valuesamples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{174F2E84-15F8-4489-AC50-C4A67DDC4043}|src\\TestingTechniques\\TestingTechniques.csproj|solutionrelative:src\\testingtechniques\\valuesamples.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2181571-FA19-4221-BB50-6E4D0DC6A34C}|tests\\TestingTechniques.Tests.UnitTest\\TestingTechniques.Tests.UnitTest.csproj|c:\\cb.academy.jd.education\\testdrivendevelopment\\2.techniques\\tests\\testingtechniques.tests.unittest\\valuesamplestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2181571-FA19-4221-BB50-6E4D0DC6A34C}|tests\\TestingTechniques.Tests.UnitTest\\TestingTechniques.Tests.UnitTest.csproj|solutionrelative:tests\\testingtechniques.tests.unittest\\valuesamplestest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ValueSamplesTest.cs",
+              "DocumentMoniker": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\2.Techniques\\tests\\TestingTechniques.Tests.UnitTest\\ValueSamplesTest.cs",
+              "RelativeDocumentMoniker": "tests\\TestingTechniques.Tests.UnitTest\\ValueSamplesTest.cs",
+              "ToolTip": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\2.Techniques\\tests\\TestingTechniques.Tests.UnitTest\\ValueSamplesTest.cs",
+              "RelativeToolTip": "tests\\TestingTechniques.Tests.UnitTest\\ValueSamplesTest.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAqwC4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T12:53:21.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ValueSamples.cs",
+              "DocumentMoniker": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\2.Techniques\\src\\TestingTechniques\\ValueSamples.cs",
+              "RelativeDocumentMoniker": "src\\TestingTechniques\\ValueSamples.cs",
+              "ToolTip": "C:\\CB.Academy.Jd.Education\\TestDrivenDevelopment\\2.Techniques\\src\\TestingTechniques\\ValueSamples.cs",
+              "RelativeToolTip": "src\\TestingTechniques\\ValueSamples.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T12:36:04.637Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

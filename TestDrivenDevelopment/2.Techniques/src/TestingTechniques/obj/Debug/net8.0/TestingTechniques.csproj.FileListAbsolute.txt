@@ -1,0 +1,12 @@
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\bin\Debug\net8.0\TestingTechniques.deps.json
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\bin\Debug\net8.0\TestingTechniques.dll
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\bin\Debug\net8.0\TestingTechniques.pdb
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.GeneratedMSBuildEditorConfig.editorconfig
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.AssemblyInfoInputs.cache
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.AssemblyInfo.cs
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.csproj.CoreCompileInputs.cache
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.sourcelink.json
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.dll
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\refint\TestingTechniques.dll
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\TestingTechniques.pdb
+C:\CB.Academy.Jd.Education\TestDrivenDevelopment\2.Techniques\src\TestingTechniques\obj\Debug\net8.0\ref\TestingTechniques.dll
