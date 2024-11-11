@@ -77,3 +77,10 @@ dotnet dev-certs https -ep cert.pfx -p Test1234!
 dotnet dev-certs https --trust
 ```
 
+coverage
+```
+dotnet add package coverlet.msbuild
+dotnet test --collect:"XPlat Code Coverage"
+dotnet tool install -g dotnet-reportgenerator-globaltool
+reportgenerator -reports:"../coverage.cobertura.xml" -targetdir:"../CoverletReport"
+```
