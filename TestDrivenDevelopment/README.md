@@ -73,3 +73,7 @@ SSL sertifikası oluşturmna
 dotnet dev-certs https -ep cert.pfx -p Test1234!
 ```
 
+```
+dotnet dev-certs https --trust
+```
+
