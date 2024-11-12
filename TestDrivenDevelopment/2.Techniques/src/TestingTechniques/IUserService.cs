@@ -11,4 +11,9 @@ public class UserService : IUserService
     {
         return false;
     }
+
+    public Task<int> CreateAsync(string fullName, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
 }

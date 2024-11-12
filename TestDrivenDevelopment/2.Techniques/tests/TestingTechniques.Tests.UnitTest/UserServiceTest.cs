@@ -9,9 +9,11 @@ public sealed class UserServiceTest
     {
 
         // Arrange
+        //var moqUserService = new Mock<IUserService>();
+        //moqUserService.Setup(s=> s.Create(It.IsAny<string>())).Returns(true);
         IUserService userService = Substitute.For<IUserService>();
-        userService.Create(Arg.Any<string>()).Returns(true);
-        userService.CreateAsync(Arg.Any<string>(), default).Returns(5);
+        //userService.Create(Arg.Any<string>()).Returns(true);
+        //userService.CreateAsync(Arg.Any<string>(), default).Returns(5);
 
         // Act
         int response = await userService.CreateAsync("Taner Saydam", default);

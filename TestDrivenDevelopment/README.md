@@ -5,6 +5,12 @@
 - [x] Ignoring Tests
 - [x] Object Test
 - [x] Enumerables Test
+- [x] Private ve Internal Metot Testi
+- [x] AutoFixture (https://code-maze.com/csharp-test-data-generation-with-autofixture)
+- [x] Bogus
+- [x] NSubstitute
+- [x] Moq vs NSubstitute
+- [x] Gerçek hayat projesi oluşturup test yazalım
 
 ## 11.11.2024
 - [x] Test Nedir?
@@ -22,14 +28,6 @@
 - [x] Number Test
 - [x] Date Test
 - [x] Throw Exception Test
-- [x] Private ve Internal Metot Testi
-- [x] AutoFixture (https://code-maze.com/csharp-test-data-generation-with-autofixture)
-- [x] Bogus
-
-## Unit Test
-- [ ] NSubstitute
-- [ ] Moq vs NSubstitute
-- [ ] Gerçek hayat projesi oluşturup test yazalım
 
 ## Integration Test
 - [ ] Integration test nedir?
