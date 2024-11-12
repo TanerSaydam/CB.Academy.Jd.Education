@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B9C4B708-4B52-42E8-AA3D-F72F0242F02A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2BDB4762-CE3E-4CBD-BC0C-5D6BAF2903B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonelTakip.Domain", "src\PersonelTakip.Domain\PersonelTakip.Domain.csproj", "{7B3BFEB0-199C-4ADF-82D3-A3863B682BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonelTakip.Application", "src\PersonelTakip.Application\PersonelTakip.Application.csproj", "{05EFF592-5801-49CB-A4FE-AAD30087776E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonelTakip.Infrastructure", "src\PersonelTakip.Infrastructure\PersonelTakip.Infrastructure.csproj", "{3DE7F902-A036-4AE5-86B8-5937CAF63803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonelTakip.WebAPI", "src\PersonelTakip.WebAPI\PersonelTakip.WebAPI.csproj", "{779F231B-0966-46C3-967D-FD6AFA155CBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B3BFEB0-199C-4ADF-82D3-A3863B682BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3BFEB0-199C-4ADF-82D3-A3863B682BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3BFEB0-199C-4ADF-82D3-A3863B682BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3BFEB0-199C-4ADF-82D3-A3863B682BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05EFF592-5801-49CB-A4FE-AAD30087776E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EFF592-5801-49CB-A4FE-AAD30087776E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EFF592-5801-49CB-A4FE-AAD30087776E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EFF592-5801-49CB-A4FE-AAD30087776E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE7F902-A036-4AE5-86B8-5937CAF63803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE7F902-A036-4AE5-86B8-5937CAF63803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE7F902-A036-4AE5-86B8-5937CAF63803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE7F902-A036-4AE5-86B8-5937CAF63803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779F231B-0966-46C3-967D-FD6AFA155CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779F231B-0966-46C3-967D-FD6AFA155CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779F231B-0966-46C3-967D-FD6AFA155CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779F231B-0966-46C3-967D-FD6AFA155CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B3BFEB0-199C-4ADF-82D3-A3863B682BA2} = {B9C4B708-4B52-42E8-AA3D-F72F0242F02A}
+		{05EFF592-5801-49CB-A4FE-AAD30087776E} = {B9C4B708-4B52-42E8-AA3D-F72F0242F02A}
+		{3DE7F902-A036-4AE5-86B8-5937CAF63803} = {B9C4B708-4B52-42E8-AA3D-F72F0242F02A}
+		{779F231B-0966-46C3-967D-FD6AFA155CBE} = {B9C4B708-4B52-42E8-AA3D-F72F0242F02A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56359AF6-9740-4FCD-93EA-EF5E8C6414C9}
+	EndGlobalSection
+EndGlobal

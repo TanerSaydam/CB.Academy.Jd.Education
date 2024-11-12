@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4BA0EF58-996F-466B-B218-0AFABAB820D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{25BE67F5-1FC3-45E5-998C-3C1AD4EB2DF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StokTakip.WebAPI", "src\StokTakip.WebAPI\StokTakip.WebAPI.csproj", "{BCBAD1E6-CA1B-4481-973C-20E391A1007F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCBAD1E6-CA1B-4481-973C-20E391A1007F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBAD1E6-CA1B-4481-973C-20E391A1007F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBAD1E6-CA1B-4481-973C-20E391A1007F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBAD1E6-CA1B-4481-973C-20E391A1007F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCBAD1E6-CA1B-4481-973C-20E391A1007F} = {4BA0EF58-996F-466B-B218-0AFABAB820D3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC7AD34A-9992-4B98-B29E-F301FAC2A4C2}
+	EndGlobalSection
+EndGlobal
