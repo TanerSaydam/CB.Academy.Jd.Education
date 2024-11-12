@@ -49,4 +49,50 @@ public class ValueSamplesTest
         dateOfBirth.Should().BeAfter(new(1980, 09, 03));
         dateOfBirth.Should().BeBefore(new(2000, 09, 03));
     }
+
+    [Fact]
+    public void ObjectAssertionExample()
+    {
+        // Arrange
+        User user = _sut.AppUser;
+        User expected = new()
+        {
+            FullName = "Taner Saydam",
+            Age = 35,
+            DateOfBirth = new(1989, 09, 03)
+        };
+
+        // Assert
+        user.Should().BeEquivalentTo(expected);
+        user.FullName.Should().Be(expected.FullName);
+        user.Age.Should().Be(expected.Age);
+        user.DateOfBirth.Should().Be(expected.DateOfBirth);
+    }
+
+    [Fact]
+    public void ListAssertionExample()
+    {
+        // Arrange
+        IEnumerable<User> users = _sut.Users;
+        List<User> expected = new()
+        {
+            new User()
+            {
+                FullName = "Taner Saydam",
+                Age = 35,
+                DateOfBirth= new(1989,09,03)
+            },
+            new User()
+            {
+                FullName = "Toprak Saydam",
+                Age = 5,
+                DateOfBirth = new(2019, 09, 07)
+            }
+        };
+
+        // Assert
+        users.Should().BeEquivalentTo(expected);
+        users.Should().HaveCount(2);
+        users.First().FullName.Should().Be(expected.First().FullName);
+    }
 }

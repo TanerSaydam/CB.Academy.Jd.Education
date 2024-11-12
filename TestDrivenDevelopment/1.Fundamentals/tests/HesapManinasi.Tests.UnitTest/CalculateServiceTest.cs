@@ -1,60 +1,85 @@
 ﻿using HesapMakinasi;
+using Xunit.Abstractions;
 
 namespace HesapManinasi.Tests.UnitTest;
-public sealed class CalculateServiceTest
+public sealed class CalculateServiceFixture
 {
-    private readonly CalculateService calculateService;
-
-    public CalculateServiceTest()
+    public readonly CalculateService calculateService;
+    public Guid Id;
+    public CalculateServiceFixture()
     {
+        Id = Guid.NewGuid();
         calculateService = new();
+    }
+}
+public sealed class CalculateServiceTest : IClassFixture<CalculateServiceFixture>
+{
+    private readonly CalculateService _sut;
+    private readonly ITestOutputHelper _output;
+    private readonly CalculateServiceFixture _fixture;
+    public CalculateServiceTest(CalculateServiceFixture fixture, ITestOutputHelper output)
+    {
+        _fixture = fixture;
+        _sut = fixture.calculateService;
+        _output = output;
     }
 
     [Fact]
-    public void Add_ShouldSumTwoInteger_When_HaveTwoInteger()
+    public async Task Add_ShouldSumTwoInteger_When_HaveTwoInteger()
     {
         //// Arrange
         //CalculateService calculateService = new();
 
         // Act
-        int response = calculateService.Add(1, 2);
+        int response = _sut.Add(1, 2);
 
         // Assert
         Assert.Equal(3, response);
         Assert.NotEqual(4, response);
+
+        _output.WriteLine(_fixture.Id.ToString());
+
+        await Task.Delay(2000);
     }
 
     [Fact]
-    public void Subtract_ShouldSubtractTwoInteger_When_HaveToInteger()
+    public async Task Subtract_ShouldSubtractTwoInteger_When_HaveToInteger()
     {
-        int response = calculateService.Subtract(3, 1);
+        int response = _sut.Subtract(3, 1);
 
         Assert.Equal(2, response);
+        _output.WriteLine(_fixture.Id.ToString());
+
+        await Task.Delay(2000);
     }
 
     [Fact]
-    public void Divide_ShouldThrowArgumentException_When_SecondParameterValueIfZero()
+    public async Task Divide_ShouldThrowArgumentException_When_SecondParameterValueIfZero()
     {
-        Action action = () => calculateService.Divide(1, 0);
+        Action action = () => _sut.Divide(1, 0);
 
         Assert.Throws<DivideException>(action);
+        _output.WriteLine(_fixture.Id.ToString());
+
+        await Task.Delay(2000);
     }
 
     [Fact]
-    public void Divide_ShouldDivideTwoInteger_When_HaveTwoInteger()
+    public async Task Divide_ShouldDivideTwoInteger_When_HaveTwoInteger()
     {
-        int response = calculateService.Divide(4, 2);
+        int response = _sut.Divide(4, 2);
         Assert.Equal(2, response);
+        _output.WriteLine(_fixture.Id.ToString());
+
+        await Task.Delay(2000);
     }
 
     [Fact]
-    public void Multiply_ShouldMultiplyTwoInteger_When_HaveTwoInteger()
+    public async Task Multiply_ShouldMultiplyTwoInteger_When_HaveTwoInteger()
     {
-        int response = calculateService.Multiply(2, 3);
+        int response = _sut.Multiply(2, 3);
         Assert.Equal(6, response);
-    }
 
-    // başarılı bölme testi yazın
-    // çarpma metodu ekledin
-    // başarılı çarpma testi yazın
+        await Task.Delay(2000);
+    }
 }
