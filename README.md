@@ -1,1 +1,0 @@
-# CB Academy JD Eğitim Reposu
