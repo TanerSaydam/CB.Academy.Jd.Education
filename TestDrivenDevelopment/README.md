@@ -1,5 +1,11 @@
 # Test Driven Development Eğitim İçeriği ve Ders Programı
 
+## 12.11.2024
+- [x] Parameterizing Tests
+- [x] Ignoring Tests
+- [x] Object Test
+- [x] Enumerables Test
+
 ## 11.11.2024
 - [x] Test Nedir?
 - [x] Test türleri nelerdir?
@@ -16,18 +22,14 @@
 - [x] Number Test
 - [x] Date Test
 - [x] Throw Exception Test
+- [x] Private ve Internal Metot Testi
+- [x] AutoFixture (https://code-maze.com/csharp-test-data-generation-with-autofixture)
+- [x] Bogus
 
 ## Unit Test
-- [ ] Parameterizing Tests
-- [ ] Ignoring Tests
-- [ ] Object Test
-- [ ] Enumerables Test
-- [ ] Private ve Internal Metot Testi
 - [ ] NSubstitute
 - [ ] Moq vs NSubstitute
 - [ ] Gerçek hayat projesi oluşturup test yazalım
-- [ ] AutoFixture (https://code-maze.com/csharp-test-data-generation-with-autofixture)
-- [ ] Bogus
 
 ## Integration Test
 - [ ] Integration test nedir?

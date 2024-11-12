@@ -1,3 +1,5 @@
+using AutoFixture;
+using Bogus;
 using FluentAssertions;
 
 namespace TestingTechniques.Tests.UnitTest;
@@ -53,6 +55,21 @@ public class ValueSamplesTest
     [Fact]
     public void ObjectAssertionExample()
     {
+        Fixture fixture = new();
+        User2 user2 = fixture.Create<User2>();
+        Faker<User2> faker =
+            new Faker<User2>()
+            .RuleFor(p => p.FullName, f => f.Person.FullName)
+            .RuleFor(p => p.Age, f => f.Person.Random.Number(18, 50))
+            .RuleFor(p => p.DateOfBirth, f => f.Person.DateOfBirth);
+
+        User2 user3 = faker.Generate();
+        User2 user4 = faker.Generate();
+        User2 user5 = faker.Generate();
+
+        //user2.FullName = faker.Person.FullName;
+        //user2.Age = faker.Person.Random.Number(18, 50);
+
         // Arrange
         User user = _sut.AppUser;
         User expected = new()
@@ -94,5 +111,12 @@ public class ValueSamplesTest
         users.Should().BeEquivalentTo(expected);
         users.Should().HaveCount(2);
         users.First().FullName.Should().Be(expected.First().FullName);
+    }
+
+    [Fact]
+    public void InternalAssertionExample()
+    {
+        //Arrange 
+        decimal salary = _sut.Salary;
     }
 }

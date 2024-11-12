@@ -32,6 +32,9 @@ public class ValueSamples
     };
 
     public List<int> Numbers = new() { 1, 2, 3, 4, 5 };
+
+    private int Stock = 10;
+    internal decimal Salary = 150000;
 }
 
 public class User
@@ -43,4 +46,12 @@ public class User
     public string FullName { get; set; } = default!;
     public int Age { get; set; }
     public DateOnly DateOfBirth { get; set; }
+}
+
+
+public class User2
+{
+    public string FullName { get; set; } = default!;
+    public int Age { get; set; }
+    public DateTime DateOfBirth { get; set; }
 }
