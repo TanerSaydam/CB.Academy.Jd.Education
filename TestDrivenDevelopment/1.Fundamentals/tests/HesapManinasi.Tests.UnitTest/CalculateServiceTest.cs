@@ -14,6 +14,13 @@ public sealed class CalculateServiceFixture
 }
 public sealed class CalculateServiceTest : IClassFixture<CalculateServiceFixture>
 {
+    public static IEnumerable<object[]> Data => new List<object[]>
+    {
+        new object[] { 1,2,3},
+        new object[] { 2,2,4},
+        new object[] { 3,2,5},
+    };
+
     private readonly CalculateService _sut;
     private readonly ITestOutputHelper _output;
     private readonly CalculateServiceFixture _fixture;
@@ -24,22 +31,26 @@ public sealed class CalculateServiceTest : IClassFixture<CalculateServiceFixture
         _output = output;
     }
 
-    [Fact]
-    public async Task Add_ShouldSumTwoInteger_When_HaveTwoInteger()
+    [Theory]
+    //[InlineData(1, 2, 3)]
+    //[InlineData(4, 2, 6)]
+    //[InlineData(8, 3, 11)]
+    [MemberData(nameof(Data))]
+    public void Add_ShouldSumTwoInteger_When_HaveTwoInteger(int x, int y, int expected)
     {
         //// Arrange
         //CalculateService calculateService = new();
 
         // Act
-        int response = _sut.Add(1, 2);
+        int response = _sut.Add(x, y);
 
         // Assert
-        Assert.Equal(3, response);
-        Assert.NotEqual(4, response);
+        Assert.Equal(expected, response);
+        Assert.NotEqual(expected + 1, response);
 
-        _output.WriteLine(_fixture.Id.ToString());
+        //_output.WriteLine(_fixture.Id.ToString());
 
-        await Task.Delay(2000);
+        //await Task.Delay(2000);
     }
 
     [Fact]
@@ -53,6 +64,7 @@ public sealed class CalculateServiceTest : IClassFixture<CalculateServiceFixture
         await Task.Delay(2000);
     }
 
+    //[Fact(Skip = "Bu test çalışmamalı")]
     [Fact]
     public async Task Divide_ShouldThrowArgumentException_When_SecondParameterValueIfZero()
     {
@@ -64,14 +76,16 @@ public sealed class CalculateServiceTest : IClassFixture<CalculateServiceFixture
         await Task.Delay(2000);
     }
 
-    [Fact]
-    public async Task Divide_ShouldDivideTwoInteger_When_HaveTwoInteger()
+    [Theory]
+    [InlineData(4, 2, 2)]
+    [InlineData(4, 0, 0, Skip = "ikinci rakam 0a bölünemediği için bu test çalışmamalı")]
+    public void Divide_ShouldDivideTwoInteger_When_HaveTwoInteger(int x, int y, int expected)
     {
-        int response = _sut.Divide(4, 2);
-        Assert.Equal(2, response);
-        _output.WriteLine(_fixture.Id.ToString());
+        int response = _sut.Divide(x, y);
+        Assert.Equal(expected, response);
+        //_output.WriteLine(_fixture.Id.ToString());
 
-        await Task.Delay(2000);
+        //await Task.Delay(2000);
     }
 
     [Fact]
@@ -82,4 +96,7 @@ public sealed class CalculateServiceTest : IClassFixture<CalculateServiceFixture
 
         await Task.Delay(2000);
     }
+
 }
+
+
