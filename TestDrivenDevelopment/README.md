@@ -59,6 +59,11 @@
 ## Test Driven Development
 
 ### Not: 
+Docker compose çalıştırma kodu
+```
+docker compose up -d
+```
+
 SSL sertifikası oluşturmna
 ```
 dotnet dev-certs https --trust
