@@ -1,5 +1,16 @@
 # Test Driven Development Eğitim İçeriği ve Ders Programı
 
+## 13.11.2024
+- [x] Integration test nedir?
+- [x] İlk Integration testimizi yazalım
+- [x] Integration Test isimlendirme kuralları
+- [x] Test setup
+- [x] Test cleanup
+- [x] WebApplication Factory
+- [x] Testing status codes
+- [x] Testing text responses
+- [x] Testing JSON responses
+
 ## 12.11.2024
 - [x] Parameterizing Tests
 - [x] Ignoring Tests
@@ -30,15 +41,7 @@
 - [x] Throw Exception Test
 
 ## Integration Test
-- [ ] Integration test nedir?
-- [ ] İlk Integration testimizi yazalım
-- [ ] Integration Test isimlendirme kuralları
-- [ ] Test setup
-- [ ] Test cleanup
-- [ ] WebApplication Factory
-- [ ] Testing status codes
-- [ ] Testing text responses
-- [ ] Testing JSON responses
+
 - [ ] Testing response headers
 - [ ] Creating realistic test data
 - [ ] Cleaning up the test data

@@ -12,10 +12,13 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+if (!builder.Environment.IsEnvironment("Test"))
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("NpgSql"));
-});
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    {
+        options.UseNpgsql(builder.Configuration.GetConnectionString("NpgSql"));
+    });
+}
 
 builder.Services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -55,5 +58,11 @@ app.MapDelete("/products", async (Guid id, IProductService productService, Cance
     var result = await productService.DeleteByIdAsync(id, cancellationToken);
     return Results.Ok();
 });
+
+using (var scoped = app.Services.CreateScope())
+{
+    var dbContext = scoped.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
+}
 
 app.Run();
