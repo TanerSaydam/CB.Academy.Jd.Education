@@ -10,6 +10,9 @@
 - [x] Testing status codes
 - [x] Testing text responses
 - [x] Testing JSON responses
+- [x] Creating realistic test data
+- [x] Cleaning up the test data
+- [x] Creating a test container for our database
 
 ## 12.11.2024
 - [x] Parameterizing Tests
@@ -41,23 +44,8 @@
 - [x] Throw Exception Test
 
 ## Integration Test
-
-- [ ] Testing response headers
-- [ ] Creating realistic test data
-- [ ] Cleaning up the test data
 - [ ] Sharing a single application for multiple test classes
-- [ ] Create WebApplication Factory
-- [ ] Creating a test container for our database
 - [ ] WireMock
-- [ ] Creating a mocked API server with WireMock
-- [ ] Create a resource
-- [ ] Getting a resource
-- [ ] Getting all resources
-- [ ] Updating a resource
-- [ ] Deleting a resource
-- [ ] API Dependency is unavailable
-- [ ] Dealing with requests requiring auth
-- [ ] Dealing with background services
 
 ## Test Driven Development
 
