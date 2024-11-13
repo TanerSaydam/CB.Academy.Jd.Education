@@ -5,6 +5,6 @@ services:
     - 5432:5432
     container_name: postgredb
     environment:
-    - POSTGRES_USER= postgres
-    - POSTGRES_PASSWORD= 1
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=1
     - POSTGRES_DB= mydb
