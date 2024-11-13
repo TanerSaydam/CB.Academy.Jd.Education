@@ -7,4 +7,5 @@ services:
     environment:
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=1
-    - POSTGRES_DB= mydb
+    - POSTGRES_DB=mydb
+    - POSTGRES_HOST_AUTH_METHOD=trust
