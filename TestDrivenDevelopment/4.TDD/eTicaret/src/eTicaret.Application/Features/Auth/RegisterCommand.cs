@@ -22,6 +22,13 @@ public sealed class RegisterCommandHandler(
 
         User user = MapToUser(request);
 
+        var result = await userRepository.AddAsync(user, cancellationToken);
+
+        if (!result)
+        {
+            throw new Exception();
+        }
+
         return user;
     }
 

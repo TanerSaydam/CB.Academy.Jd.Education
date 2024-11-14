@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Application", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Application.Tests.UnitTest", "tests\eTicaret.Application.Tests.UnitTest\eTicaret.Application.Tests.UnitTest.csproj", "{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.WebAPI.Tests.IntegrationTest", "tests\eTicaret.WebAPI.Tests.IntegrationTest\eTicaret.WebAPI.Tests.IntegrationTest.csproj", "{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.WebAPI", "src\eTicaret.WebAPI\eTicaret.WebAPI.csproj", "{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +62,7 @@ Global
 		{8A3B7BA2-9A6A-4087-B4AF-E5EE380897CF} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
 		{557065D1-84BC-47EB-AB15-CA6E4015EDC6} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
 		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391} = {CE332E97-849D-47AF-AD4A-C1D77DFF3AD4}
+		{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88} = {CE332E97-849D-47AF-AD4A-C1D77DFF3AD4}
+		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
 	EndGlobalSection
 EndGlobal

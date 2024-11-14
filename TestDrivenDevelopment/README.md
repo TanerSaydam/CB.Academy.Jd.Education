@@ -1,5 +1,9 @@
 # Test Driven Development Eğitim İçeriği ve Ders Programı
 
+## 14.11.2024
+- [X] TDD nedir?
+- [X] TDD ile proje yazmaya başlayalım
+
 ## 13.11.2024
 - [x] Integration test nedir?
 - [x] İlk Integration testimizi yazalım
@@ -42,10 +46,6 @@
 - [x] Number Test
 - [x] Date Test
 - [x] Throw Exception Test
-
-## Integration Test
-- [ ] Sharing a single application for multiple test classes
-- [ ] WireMock
 
 ## Test Driven Development
 
