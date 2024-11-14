@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Domain.Tests.UnitTest", "tests\eTicaret.Domain.Tests.UnitTest\eTicaret.Domain.Tests.UnitTest.csproj", "{A5E4B90E-5731-4EB8-976E-8B12D27D9A64}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{409408C5-9A53-49D2-B5E8-08F59AAC030A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Domain", "src\eTicaret.Domain\eTicaret.Domain.csproj", "{8A3B7BA2-9A6A-4087-B4AF-E5EE380897CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Application", "src\eTicaret.Application\eTicaret.Application.csproj", "{557065D1-84BC-47EB-AB15-CA6E4015EDC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Application.Tests.UnitTest", "tests\eTicaret.Application.Tests.UnitTest\eTicaret.Application.Tests.UnitTest.csproj", "{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{8A3B7BA2-9A6A-4087-B4AF-E5EE380897CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A3B7BA2-9A6A-4087-B4AF-E5EE380897CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A3B7BA2-9A6A-4087-B4AF-E5EE380897CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557065D1-84BC-47EB-AB15-CA6E4015EDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557065D1-84BC-47EB-AB15-CA6E4015EDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557065D1-84BC-47EB-AB15-CA6E4015EDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557065D1-84BC-47EB-AB15-CA6E4015EDC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A5E4B90E-5731-4EB8-976E-8B12D27D9A64} = {CE332E97-849D-47AF-AD4A-C1D77DFF3AD4}
 		{8A3B7BA2-9A6A-4087-B4AF-E5EE380897CF} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
+		{557065D1-84BC-47EB-AB15-CA6E4015EDC6} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
+		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391} = {CE332E97-849D-47AF-AD4A-C1D77DFF3AD4}
 	EndGlobalSection
 EndGlobal
