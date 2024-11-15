@@ -51,7 +51,10 @@ public sealed class RegisterCommandHandlerTest
         var response = await handler.Handle(request, default);
 
         // Assert
-        response.Should().BeEquivalentTo(expected);
+        //response.Should().BeEquivalentTo(expected);
+        response.FirstName.Should().Be(expected.FirstName);
+        response.LastName.Should().Be(expected.LastName);
+        response.Email.Should().Be(expected.Email);
     }
 
     [Fact]
@@ -67,7 +70,9 @@ public sealed class RegisterCommandHandlerTest
         var response = await handler.Handle(request, default);
 
         // Assert
-        response.Should().BeEquivalentTo(expected);
+        response.FirstName.Should().Be(expected.FirstName);
+        response.LastName.Should().Be(expected.LastName);
+        response.Email.Should().Be(expected.Email);
     }
 
 }

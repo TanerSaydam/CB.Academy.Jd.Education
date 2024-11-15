@@ -7,13 +7,18 @@ using Scrutor;
 namespace eTicaret.Infrastructure;
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        string environmentName,
+        IConfiguration configuration)
     {
-        services.AddDbContext<ApplicationDbContext>(options =>
+        if (environmentName != "Test")
         {
-            options.UseNpgsql(configuration.GetConnectionString("SqlServer"));
-        });
-
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseNpgsql(configuration.GetConnectionString("SqlServer"));
+            });
+        }
         services.Scan(action => action
         .FromAssemblies(typeof(DependencyInjection).Assembly)
         .AddClasses(publicOnly: false)

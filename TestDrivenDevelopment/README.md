@@ -1,5 +1,10 @@
 # Test Driven Development Eğitim İçeriği ve Ders Programı
 
+## 15.11.2024
+- [x] Test süerince DevOps
+- [x] Integration Test Tekrarı
+- [x] Test Container ve Mvc.Testing Tekrarı
+
 ## 14.11.2024
 - [X] TDD nedir?
 - [X] TDD ile proje yazmaya başlayalım

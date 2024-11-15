@@ -7,14 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddInfrastructure(builder.Environment.EnvironmentName, builder.Configuration);
 builder.Services.AddApplication();
 
 var app = builder.Build();
 
 app.MapControllers();
 
-if (app.Environment.IsDevelopment())
+if (!app.Environment.IsProduction())
 {
     using (var scoped = app.Services.CreateScope())
     {
