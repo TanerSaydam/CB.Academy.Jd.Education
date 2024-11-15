@@ -9,6 +9,20 @@ public sealed record RegisterCommand(
     string LastName,
     string Email) : IRequest<User>;
 
+//public sealed record RegisterCommandClass
+//{
+//    public RegisterCommandClass(string firstName, string lastName, string email)
+//    {
+//        FirstName = firstName;
+//        LastName = lastName;
+//        Email = email;
+//    }
+
+//    public string FirstName { get; init; }
+//    public string LastName { get; init; }
+//    public string Email { get; init; }
+//}
+
 public sealed class RegisterCommandHandler(
     IUserRepository userRepository) : IRequestHandler<RegisterCommand, User>
 {

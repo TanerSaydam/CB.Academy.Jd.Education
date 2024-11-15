@@ -2,16 +2,18 @@
 
 public sealed class User
 {
+    public Guid Id { get; set; }
     public string FirstName { get; private set; } = default!;
     public string LastName { get; private set; } = default!;
     public string Email { get; private set; } = default!;
 
     public User()
     {
-
+        Id = Guid.NewGuid();
     }
     public User(string firstName, string lastName, string email)
     {
+        Id = Guid.NewGuid();
         SetFirstName(firstName);
         SetLastName(lastName);
         SetEmail(email);
