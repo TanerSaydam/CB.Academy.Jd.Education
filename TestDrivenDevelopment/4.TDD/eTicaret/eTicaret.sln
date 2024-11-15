@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.WebAPI.Tests.Integ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.WebAPI", "src\eTicaret.WebAPI\eTicaret.WebAPI.csproj", "{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eTicaret.Infrastructure", "src\eTicaret.Infrastructure\eTicaret.Infrastructure.csproj", "{71B7C42A-80A7-4161-BE6E-00E78E5D8A10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B7C42A-80A7-4161-BE6E-00E78E5D8A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B7C42A-80A7-4161-BE6E-00E78E5D8A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B7C42A-80A7-4161-BE6E-00E78E5D8A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B7C42A-80A7-4161-BE6E-00E78E5D8A10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +70,6 @@ Global
 		{A070C503-B5C2-4E09-AD17-B4D3A1C6E391} = {CE332E97-849D-47AF-AD4A-C1D77DFF3AD4}
 		{FEE26BBE-B5D8-4024-A2C2-9BD5F42D3B88} = {CE332E97-849D-47AF-AD4A-C1D77DFF3AD4}
 		{5D08AC85-676A-4E4D-958E-0D52B6A93DB4} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
+		{71B7C42A-80A7-4161-BE6E-00E78E5D8A10} = {409408C5-9A53-49D2-B5E8-08F59AAC030A}
 	EndGlobalSection
 EndGlobal
