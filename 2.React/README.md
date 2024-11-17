@@ -1,6 +1,6 @@
 # React Eğitim İçeriği ve Ders Programı
 
-## Ders İçeriği
+## Fundamentals
 - [ ] SPA Nedir?
 - [ ] React nedir?
 - [ ] React kurulumu ve projeyi çalıştırma
@@ -18,7 +18,17 @@
 - [ ] (Pratik Zamanı) Projemizi componentlere bölelim
 - [ ] Props
 - [ ] Style
+- [ ]  (Pratik Zamanı) Personel projesi yapalım
+## Components
+- [ ] progress
+- [ ] Profiler
+- [ ] StrictMode
+- [ ] Suspense
+## Concepts
 - [ ] Router (React Router eski)
+	- [ ] React Hooks
+		- [ ] useNavigate
+		- [ ] useParams
 - [ ] (Pratik Zamanı) Birkaç proje oluşturup React Router'un eski yapısını pratik de kullanalım
 - [ ] Router (React Router yeni)
 - [ ] (Pratik Zamanı) Birkaç proje oluşturup React Router'un yeni yapısını pratik de kullanalım
@@ -28,8 +38,11 @@
 - [ ] Life Cycle ve Life Cycle Methods
 - [ ] React Hooks
 	- [ ] useEffect
+- [ ] (Pratik Zamanı) json-server ile bir eTicaret yapalım
+## Libraries
 - [ ] React Tanstack Query (Axios, Fetch)
 - [ ] React Formik
+## State Management
 - [ ] State Management
 	- [ ] Context API
 		- [ ] React Hooks
@@ -39,6 +52,7 @@
 		- [ ] React Hooks
 			- [ ] useReducer
 	- [ ] Zustand
+## Hooks
 - [ ] React Hooks
 	- [ ] useMemo
 	- [ ] useRef
@@ -51,8 +65,7 @@
  	- [ ] useSyncExternalStore (React 18 ve sonrası)
  	- [ ] useInsertionEffect (React 18 ve sonrası)
 
-
-### Not: 
+## Not: 
 Node.JS kurulumu için <a href="https://nodejs.org/en" target="_blank">buraya tıklayın</a>  
 
 React Documentation için <a href="https://tr.react.dev/" target="_blank">buraya tıklayın</a>  
