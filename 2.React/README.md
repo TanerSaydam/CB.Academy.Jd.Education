@@ -26,12 +26,29 @@
 - [ ] Suspense
 ## Concepts
 - [ ] Router (React Router eski)
-	- [ ] React Hooks
+	- [ ] Link
+		- [ ] state
+		- [ ] Hooks
+			- [ ] useLocation
+	- [ ] NavLink
+		- [ ] isActive
+		- [ ] isPending
+	- [ ] Hooks
 		- [ ] useNavigate
 		- [ ] useParams
+	- [ ] Navigate
 - [ ] (Pratik Zamanı) Birkaç proje oluşturup React Router'un eski yapısını pratik de kullanalım
 - [ ] Router (React Router yeni)
+	- [ ] RouterProvider
+	- [ ] Data Router
+		- [ ] createBrowserRouter
 - [ ] (Pratik Zamanı) Birkaç proje oluşturup React Router'un yeni yapısını pratik de kullanalım
+- [ ] Data Router
+	- [ ] createBrowserRouter
+	- [ ] createHashRouter
+	- [ ] createMemoryRouter
+	- [ ] createStaticHandler
+	- [ ] createStaticRouter
 - [ ] API istekleri
 - [ ] Fetch
 - [ ] Axios
