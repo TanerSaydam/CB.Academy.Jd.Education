@@ -95,6 +95,11 @@ React Formik için <a href="https://formik.org/" target="_blank">buraya tıklay�
 
 React Tanstack Query için <a href="https://tanstack.com/query/latest" target="_blank">buraya tıklayın</a>
 
+CLI komutları için Powershell güvenlik iznini değiştirme
+```powershel
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 React projesi oluşturma
 ```powershell
 npx create-react-app my-app
