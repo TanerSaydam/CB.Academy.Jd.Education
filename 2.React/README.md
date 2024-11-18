@@ -1,48 +1,38 @@
 # React Eğitim İçeriği ve Ders Programı
 
-## Fundamentals
-- [ ] SPA Nedir?
-- [ ] React nedir?
-- [ ] React kurulumu ve projeyi çalıştırma
-- [ ] Component nedir?
-- [ ] Class component
-- [ ] Function component
-- [ ] JSX Nedir?
-- [ ] Virtual DOM
-- [ ] Değişken oluşturma
-- [ ] React Hooks
-	- [ ] useState
-- [ ] Function ve Arrow Function
-- [ ] (Pratik Zamanı) Todo projesi yapalım
-- [ ] Birden fazla component oluşturma ve iç içe kullanma
-- [ ] (Pratik Zamanı) Projemizi componentlere bölelim
-- [ ] Props
-- [ ] Style
-- [ ]  (Pratik Zamanı) Personel projesi yapalım
-## Components
-- [ ] progress
-- [ ] Profiler
-- [ ] StrictMode
-- [ ] Suspense
-## Concepts
-- [ ] Router (React Router eski)
+## 18.11.2024
+- [x] SPA Nedir?
+- [x] React nedir?
+- [x] React kurulumu ve projeyi çalıştırma
+- [x] Component nedir?
+- [x] Class component
+- [x] Function component
+- [x] JSX Nedir?
+- [x] Virtual DOM
+- [x] Değişken oluşturma
+- [x] React Hooks
+	- [x] useState
+- [x] Function ve Arrow Function
+- [x] Style
+- [x]  (Pratik Zamanı) Personel projesi yapalım
+- [x] Router (React Router eski)
 	- [ ] Link
 		- [ ] state
 		- [ ] Hooks
 			- [ ] useLocation
-	- [ ] NavLink
-		- [ ] isActive
-		- [ ] isPending
+	- [x] NavLink
+		- [x] isActive
+		- [x] isPending
 	- [ ] Hooks
 		- [ ] useNavigate
 		- [ ] useParams
 	- [ ] Navigate
-- [ ] (Pratik Zamanı) Birkaç proje oluşturup React Router'un eski yapısını pratik de kullanalım
-- [ ] Router (React Router yeni)
-	- [ ] RouterProvider
-	- [ ] Data Router
-		- [ ] createBrowserRouter
-- [ ] (Pratik Zamanı) Birkaç proje oluşturup React Router'un yeni yapısını pratik de kullanalım
+- [x] Router (React Router yeni)
+	- [x] RouterProvider
+	- [x] Data Router
+		- [x] createBrowserRouter
+
+## Concepts
 - [ ] Data Router
 	- [ ] createBrowserRouter
 	- [ ] createHashRouter
@@ -56,9 +46,11 @@
 - [ ] React Hooks
 	- [ ] useEffect
 - [ ] (Pratik Zamanı) json-server ile bir eTicaret yapalım
+
 ## Libraries
 - [ ] React Tanstack Query (Axios, Fetch)
 - [ ] React Formik
+
 ## State Management
 - [ ] State Management
 	- [ ] Context API
@@ -69,6 +61,7 @@
 		- [ ] React Hooks
 			- [ ] useReducer
 	- [ ] Zustand
+	
 ## Hooks
 - [ ] React Hooks
 	- [ ] useMemo
