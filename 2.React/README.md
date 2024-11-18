@@ -82,6 +82,10 @@
  	- [ ] useSyncExternalStore (React 18 ve sonrası)
  	- [ ] useInsertionEffect (React 18 ve sonrası)
 
+- [ ] Zod - React Hook Form
+- [ ] ion18
+- [ ] Prisma ORM + MongoDb + NextAPI Root Full Stack Proje
+
 ## Not: 
 Node.JS kurulumu için <a href="https://nodejs.org/en" target="_blank">buraya tıklayın</a>  
 
