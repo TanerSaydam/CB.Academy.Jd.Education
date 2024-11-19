@@ -78,8 +78,8 @@ public sealed class ShoppingCartsController(
     [HttpGet("count")]
     public async Task<IActionResult> GetCount(CancellationToken cancellationToken)
     {
-        int count = await context.ShoppingCarts.CountAsync(cancellationToken);
+        var count = await context.ShoppingCarts.CountAsync(cancellationToken);
 
-        return Ok(new { Count = count });
+        return Ok(count);
     }
 }

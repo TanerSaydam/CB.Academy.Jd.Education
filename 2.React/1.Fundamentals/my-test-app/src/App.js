@@ -1,30 +1,71 @@
-import { createContext, useContext, useState } from "react";
+import { useState } from "react";
+import { create } from "zustand";
+import { devtools } from "zustand/middleware";
 
-const CountContext = createContext(0);
+
+const useStore = create(devtools((set)=>({
+    count: 0,
+    isLoading: false,
+    increment: ()=> set((state)=> ({count: state.count + 1})),
+    decrement: ()=> set((state)=> ({count: state.count - 1})),
+    manuelIncrement: (num)=> set((state)=> ({count: state.count + num})),
+    incrementAsync: async () => {
+        set((state)=> ({isLoading: true}))
+        await new Promise((resolve) => setTimeout(resolve, 2000))
+        set((state) => ({ count: state.count + 1, isLoading: false }
+        ))
+    }
+}),{name: "ismiburayaveriyoruz"}));
+
 
 function App() { 
-    const [count, setCount]=useState(0);
-    const [isLoading, setIsLoading]=useState(false);
-    const [theme, setTheme]=useState("light");
+    const {count,isLoading} = useStore();
     return (
-        <CountContext.Provider value={{count,setCount, isLoading,theme}}>
+        <>
+        {isLoading ? (<p>loading...</p>) : 
+        (
+            <>
             <p>Hello World!{count}</p>
             <Calculate/>
-        </CountContext.Provider>
+            </>
+        )}
+        </>
     )
 }
 
 function Calculate(){
-    const data = useContext(CountContext);
-    console.log(data.count);
-    
+    const [num, setNum]= useState(0);
+
+    const {
+        count, 
+        increment, 
+        decrement,
+        manuelIncrement,
+        incrementAsync,
+        isLoading
+    } = useStore();
+
+    function checkLoading(){
+        if(isLoading){
+            return(<p>loading...</p>)
+        }else{
+            return(
+                <>
+                <input onChange={(e)=> setNum(e.target.value)} />
+                    <button onClick={increment}>+</button> 
+                    <button onClick={decrement}>-</button> 
+                    <button onClick={()=> manuelIncrement(+num)}>+{num}</button> 
+                    <button onClick={incrementAsync}>+Async</button> 
+                </>
+            )
+        }
+    }
+
     return(
         <>
-        <p>Calculate App</p>    
-        <p>{data.theme}</p>
-        <p>{data.count}</p> 
-        <button onClick={()=> data.setCount(prev => prev +1)}>+</button> 
-        <button onClick={()=> data.setCount(prev => prev -1)}>-</button> 
+        <p>Calculate App</p>  
+        <p>{count}</p> 
+        {checkLoading()}
         </>
         
     )

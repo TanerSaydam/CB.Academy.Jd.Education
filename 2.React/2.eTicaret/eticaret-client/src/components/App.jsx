@@ -13,7 +13,7 @@ function App(){
         try {
             var result = await axios.get(`${api}/api/ShoppingCarts/count`);
 
-            setCount(result.data.count);
+            setCount(result.data);
         } catch (error) {
             
         }
