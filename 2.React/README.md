@@ -1,5 +1,17 @@
 # React Eğitim İçeriği ve Ders Programı
 
+## 19.11.2024
+- [x] proxy
+- [x] State Management
+	- [x] Context API
+		- [x] [ContextName].Provider
+		- [x] React Hooks
+			- [x] createContext
+			- [x] useContext	
+	- [x] Zustand
+		- [x] create
+		- [x] devtool
+
 ## 18.11.2024
 - [x] SPA Nedir?
 - [x] React nedir?
@@ -40,27 +52,16 @@
 - [x] React Hooks
 	- [x] useEffect
 
-## Concepts
-- [ ] proxy
-
 ## State Management
-- [ ] State Management
-	- [ ] Context API
-		- [ ] [ContextName].Provider
-		- [ ] React Hooks
-			- [ ] createContext
-			- [ ] useContext
+- [x] State Management
 	- [ ] Redux Toolkit
-		- [ ] Provider
-		- [ ] createSlice
-		- [ ] configureStore
-		- [ ] createAsyncThunk
-		- [ ] createApi
-		- [ ] Hooks			
-			- [ ] useSelector
-	- [ ] Zustand
-		- [ ] create
-		- [ ] devtool
+			- [ ] Provider
+			- [ ] createSlice
+			- [ ] configureStore
+			- [ ] createAsyncThunk
+			- [ ] createApi
+			- [ ] Hooks			
+				- [ ] useSelector
 
 ## Libraries
 - [ ] React Tanstack Query (Axios, Fetch)

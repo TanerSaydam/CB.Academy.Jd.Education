@@ -1,6 +1,6 @@
 @eTicaretServer_HostAddress = http://localhost:5004
 
-GET {{eTicaretServer_HostAddress}}/weatherforecast/
+GET https://localhost:49848/api/products?$count=true&$top=5
 Accept: application/json
 
 ###

@@ -1,9 +1,8 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { formatCurrency } from "../../utilities/format";
 import axios from "axios";
 import { api } from "../../constants";
 import { useNavigate } from "react-router-dom";
-import { CountContext } from "../..";
 
 function Product(){
 	const [products, setProducts] = useState([]);
@@ -14,8 +13,8 @@ function Product(){
 	async function getAll(){
 		try {
 			var result = await axios.get(`${api}/api/products`);
-			setProducts(result.data)
-			setOrgProducts(result.data)
+			setProducts(result.data.data)
+			setOrgProducts(result.data.data)
 		} catch (error) {
 			console.log(error);		
 		}

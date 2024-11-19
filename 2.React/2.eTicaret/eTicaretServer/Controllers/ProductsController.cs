@@ -1,4 +1,5 @@
 ﻿using eTicaretServer.Abstractions;
+using eTicaretServer.AOP;
 using eTicaretServer.Context;
 using eTicaretServer.Dtos;
 using eTicaretServer.Models;
@@ -11,9 +12,10 @@ public sealed class ProductsController(
     ApplicationDbContext context) : CommonApi
 {
     [HttpGet]
-    public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
+    [EnableQueryWithMetadataAttribute]
+    public IActionResult GetAll(CancellationToken cancellationToken)
     {
-        var products = await context.Products.OrderBy(p => p.Name).ToListAsync(cancellationToken);
+        var products = context.Products.OrderBy(p => p.Name).AsQueryable();
 
         return Ok(products);
     }

@@ -1,18 +1,18 @@
 import axios from "axios";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../constants";
 import { formatCurrency } from "../utilities/format";
-import { CountContext } from "../components/App";
+import { useCountStore } from "../features/useCountStore";
 
 function Home(){
 	const [products, setProducts] = useState([]);
 	const [orgProducts, setOrgProducts] = useState([]);
-	const {count, setCount} = useContext(CountContext);
+	const {increment} = useCountStore();
 	async function getAll() {
 		try {
 			var result = await axios.get(`${api}/api/products`);
-			setProducts(result.data);
-			setOrgProducts(result.data);
+			setProducts(result.data.data);
+			setOrgProducts(result.data.data);
 		} catch (error) {
 			console.log(error);			
 		}
@@ -35,13 +35,14 @@ function Home(){
 
 	async function addShoppingCart(productId) {
 		try {
+			debugger
 			const data = {
 				productId: productId,
 				quantity: 1
 			};
 
 			await axios.post(`${api}/api/shoppingcarts`, data);
-			setCount(prev => prev +1)
+			increment()
 		} catch (error) {
 			console.log(error);		
 		}

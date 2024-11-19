@@ -2,7 +2,6 @@ import { useState } from "react";
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
-
 const useStore = create(devtools((set)=>({
     count: 0,
     isLoading: false,
@@ -14,7 +13,7 @@ const useStore = create(devtools((set)=>({
         await new Promise((resolve) => setTimeout(resolve, 2000))
         set((state) => ({ count: state.count + 1, isLoading: false }
         ))
-    }
+    } 
 }),{name: "ismiburayaveriyoruz"}));
 
 

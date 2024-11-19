@@ -1,15 +1,19 @@
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { CountContext } from "../components/App";
+import { useEffect } from "react";
+import { useCountStore } from "../features/useCountStore";
 
 function Layout() {
 	const navigate = useNavigate();
-	const {count} = useContext(CountContext);
+	const {count, isLoading, getCount} = useCountStore();
 
 	function signOut(){
 		localStorage.clear();
 		navigate("/login");
 	}
+
+	useEffect(()=>{
+		getCount();
+	},[getCount])
 
 	return (
 		<div className="container">
@@ -51,10 +55,10 @@ function Layout() {
 							</li>
 						</ul>
 						<button type="button" onClick={()=> navigate("/shopping-carts")} className="btn btn-primary position-relative">
-							<i className="fa-solid fa-shopping-cart me-1"></i>
+							<i className={"fa-solid fa-shopping-cart me-1 " + (count > 0 ? 'fa-beat' : '')}></i>
 							Sepetim
 							<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-								{count}
+								{isLoading ? '...' : count}
 							</span>
 						</button>
 						<button type="button" onClick={signOut} className="btn btn-danger ms-3">

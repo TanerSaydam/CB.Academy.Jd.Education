@@ -1,18 +1,27 @@
+using System.Text;
 using eTicaretServer;
 using eTicaretServer.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("JWT"));
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("mydb"));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseInMemoryDatabase("mydb");
+    options.LogTo(Console.WriteLine, LogLevel.Information);
+});
 builder.Services.AddCors();
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddOData(options =>
+{
+    options.EnableQueryFeatures();
+
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(setup =>
 {
