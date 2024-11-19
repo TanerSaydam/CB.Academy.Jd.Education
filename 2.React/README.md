@@ -31,37 +31,48 @@
 	- [x] RouterProvider
 	- [x] Data Router
 		- [x] createBrowserRouter
+- [x] API istekleri
+- [x] Fetch
+- [x] Axios
+- [x] Data Router
+	- [x] createBrowserRouter
+- [x] Life Cycle ve Life Cycle Methods
+- [x] React Hooks
+	- [x] useEffect
 
 ## Concepts
-- [ ] Data Router
-	- [ ] createBrowserRouter
-	- [ ] createHashRouter
-	- [ ] createMemoryRouter
-	- [ ] createStaticHandler
-	- [ ] createStaticRouter
-- [ ] API istekleri
-- [ ] Fetch
-- [ ] Axios
-- [ ] Life Cycle ve Life Cycle Methods
-- [ ] React Hooks
-	- [ ] useEffect
-- [ ] (Pratik Zamanı) json-server ile bir eTicaret yapalım
+- [ ] proxy
+
+## State Management
+- [ ] State Management
+	- [ ] Context API
+		- [ ] [ContextName].Provider
+		- [ ] React Hooks
+			- [ ] createContext
+			- [ ] useContext
+	- [ ] Redux Toolkit
+		- [ ] Provider
+		- [ ] createSlice
+		- [ ] configureStore
+		- [ ] createAsyncThunk
+		- [ ] createApi
+		- [ ] Hooks			
+			- [ ] useSelector
+	- [ ] Zustand
+		- [ ] create
+		- [ ] devtool
 
 ## Libraries
 - [ ] React Tanstack Query (Axios, Fetch)
 - [ ] React Formik
 
-## State Management
-- [ ] State Management
-	- [ ] Context API
-		- [ ] React Hooks
-			- [ ] createContext
-			- [ ] useContext
-	- [ ] Redux Toolkit (Async Thunk)
-		- [ ] React Hooks
-			- [ ] useReducer
-	- [ ] Zustand
-	
+## Concepts
+- [ ] Data Router
+	- [ ] createHashRouter
+	- [ ] createMemoryRouter
+	- [ ] createStaticHandler
+	- [ ] createStaticRouter
+
 ## Hooks
 - [ ] React Hooks
 	- [ ] useMemo
@@ -105,4 +116,33 @@ npx create-react-app my-app
 Vite js ile React projesi oluşturma
 ```powershell
 npm create vite@latest my-react-app -- --template react-ts
+```
+
+Redux
+```powershell
+npm install @reduxjs/toolkit react-redux
+```
+
+Zustand
+```powershell
+npm install zustand
+```
+
+proxy
+```powershell
+npm install http-proxy-middleware --save
+```
+
+```js
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  app.use(
+    '/todos',
+    createProxyMiddleware({
+      target: 'https://jsonplaceholder.typicode.com',
+      changeOrigin: true,
+    })
+  );
+};
 ```
