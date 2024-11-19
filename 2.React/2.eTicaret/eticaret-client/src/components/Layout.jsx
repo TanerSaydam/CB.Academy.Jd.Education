@@ -61,7 +61,7 @@ function Layout() {
 					</div>
 				</div>
 			</nav>
-
+			<hr />
 			<Outlet />
 		</div>
 	)
