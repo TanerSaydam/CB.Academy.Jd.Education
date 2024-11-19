@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { formatCurrency } from "../../utilities/format";
 import axios from "axios";
 import { api } from "../../constants";
 import { useNavigate } from "react-router-dom";
+import { CountContext } from "../..";
 
 function Product(){
 	const [products, setProducts] = useState([]);
 	const [orgProducts, setOrgProducts] = useState([]);
+
 	const navigate = useNavigate();
 
 	async function getAll(){
@@ -36,13 +38,16 @@ function Product(){
 	async function deleteById(id) {
 		const result = window.confirm("You want to delete this record?");
 		try {
+			console.log(result)
 			if(result){
 				await axios.delete(`${api}/api/products?id=${id}`);
 				getAll();
+
 			}
 		} catch (error) {
 			console.log(error);			
 		}
+
 	}
 
 	return(

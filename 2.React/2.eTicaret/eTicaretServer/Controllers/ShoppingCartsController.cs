@@ -13,7 +13,7 @@ public sealed class ShoppingCartsController(
     [HttpPost]
     public async Task<IActionResult> Add(AddShoppingCartDto request, CancellationToken cancellationToken)
     {
-        ShoppingCart cart = new ShoppingCart()
+        ShoppingCart cart = new()
         {
             ProductId = request.ProductId,
             Quantity = request.Quantity,
@@ -73,5 +73,13 @@ public sealed class ShoppingCartsController(
         await context.SaveChangesAsync(cancellationToken);
 
         return Ok(new { Message = "Ödeme başarıyla tamamlandı" });
+    }
+
+    [HttpGet("count")]
+    public async Task<IActionResult> GetCount(CancellationToken cancellationToken)
+    {
+        int count = await context.ShoppingCarts.CountAsync(cancellationToken);
+
+        return Ok(new { Count = count });
     }
 }

@@ -1,11 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { api } from "../constants";
 import { formatCurrency } from "../utilities/format";
-
+import { CountContext } from "../components/App";
 function ShoppingCart(){
 	const [carts, setCarts] = useState([]);
 	const [total, setTotal] = useState(0);
+	const {count, setCount} = useContext(CountContext);
 
 	async function getAll() {
 		try {
@@ -38,6 +39,8 @@ function ShoppingCart(){
 			if(result){
 				await axios.delete(`${api}/api/shoppingcarts?id=${id}`);
 				getAll();
+				console.log(count)
+				setCount(prev => prev - 1)
 			}			
 		} catch (error) {
 			console.log(error);			

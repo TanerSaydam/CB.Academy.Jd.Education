@@ -1,12 +1,13 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { api } from "../constants";
 import { formatCurrency } from "../utilities/format";
+import { CountContext } from "../components/App";
 
 function Home(){
 	const [products, setProducts] = useState([]);
 	const [orgProducts, setOrgProducts] = useState([]);
-
+	const {count, setCount} = useContext(CountContext);
 	async function getAll() {
 		try {
 			var result = await axios.get(`${api}/api/products`);
@@ -39,7 +40,8 @@ function Home(){
 				quantity: 1
 			};
 
-			await axios.post(`${api}/api/shoppingcarts`, data);	
+			await axios.post(`${api}/api/shoppingcarts`, data);
+			setCount(prev => prev +1)
 		} catch (error) {
 			console.log(error);		
 		}
@@ -62,7 +64,7 @@ function Home(){
 							<div className="card-body text-center">
 								<h6 className="text-success">{formatCurrency(val.price)}</h6>
 								<button onClick={()=> addShoppingCart(val.id)} className="btn btn-success">
-									<i className="fa-solid fa-cart-plus me-1"></i>
+									<i className="fa-solid fa-cart-plus me-1 fa-bounce"></i>
 									Sepete Ekle
 								</button>
 							</div>

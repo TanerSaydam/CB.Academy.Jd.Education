@@ -1,7 +1,10 @@
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CountContext } from "../components/App";
 
 function Layout() {
 	const navigate = useNavigate();
+	const {count} = useContext(CountContext);
 
 	function signOut(){
 		localStorage.clear();
@@ -51,7 +54,7 @@ function Layout() {
 							<i className="fa-solid fa-shopping-cart me-1"></i>
 							Sepetim
 							<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-								0
+								{count}
 							</span>
 						</button>
 						<button type="button" onClick={signOut} className="btn btn-danger ms-3">

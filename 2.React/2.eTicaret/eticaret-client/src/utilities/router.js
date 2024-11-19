@@ -7,32 +7,34 @@ import Create from "../pages/products/Create";
 import ShoppingCart from "../pages/ShoppingCart";
 import Order from "../pages/Order";
 
-const routes = [
+const productRoute = {
+	path: "/products",
+	children: [
+		{
+			path: "/products",
+			element: <Product/>
+		},
+		{
+			path: "/products/create",
+			element: <Create/>
+		}
+	]
+}
+
+const routes = [	
 	{
 		path: "/login",
 		element: <Login/>
 	},
 	{
 		path: "/",
-		element: <Layout/>,
+		element: <Layout/>,		
 		children: [
 			{
 				path: "/",
 				element: <Home/>
 			},
-			{
-				path: "/products",
-				children: [
-					{
-						path: "/products",
-						element: <Product/>
-					},
-					{
-						path: "/products/create",
-						element: <Create/>
-					}
-				]
-			},
+			productRoute,
 			{
 				path: "/shopping-carts",
 				element: <ShoppingCart/>
