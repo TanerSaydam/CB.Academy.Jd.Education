@@ -2,6 +2,7 @@
 using eTicaretServer.Context;
 using eTicaretServer.Dtos;
 using eTicaretServer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -11,6 +12,7 @@ using System.Security.Claims;
 using System.Text;
 
 namespace eTicaretServer.Controllers;
+[AllowAnonymous]
 public sealed class AuthController(
     ApplicationDbContext context,
     IOptions<JwtOptions> options
@@ -23,7 +25,7 @@ public sealed class AuthController(
 
         if (user is null)
         {
-            return NotFound();
+            return BadRequest(new { Message = "Kullanıcı bulunamadı" });
         }
 
         List<Claim> claims = new()
