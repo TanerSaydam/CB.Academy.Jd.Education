@@ -133,6 +133,7 @@ proxy
 npm install http-proxy-middleware --save
 ```
 
+src folder altında <b>setupProxy.js</b> adıyla dosya kaydedilmeli
 ```js
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
