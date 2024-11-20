@@ -1,72 +1,67 @@
-import { useState } from "react";
-import { create } from "zustand";
-import { devtools } from "zustand/middleware";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment, incrementByValue } from "./features/Counter/count";
+import { changeTheme } from "./features/theme";
+import { getTodo } from "./features/todo";
 
-const useStore = create(devtools((set)=>({
-    count: 0,
-    isLoading: false,
-    increment: ()=> set((state)=> ({count: state.count + 1})),
-    decrement: ()=> set((state)=> ({count: state.count - 1})),
-    manuelIncrement: (num)=> set((state)=> ({count: state.count + num})),
-    incrementAsync: async () => {
-        set((state)=> ({isLoading: true}))
-        await new Promise((resolve) => setTimeout(resolve, 2000))
-        set((state) => ({ count: state.count + 1, isLoading: false }
-        ))
-    } 
-}),{name: "ismiburayaveriyoruz"}));
+function App() {
+    const count = useSelector((store) => store.counter.count);
+    const themeValue = useSelector((store)=> store.theme.value);
+    const dispatch = useDispatch();
 
+    const data = useSelector((store)=> store.todo.data);
+    const isLoading = useSelector((store)=> store.todo.isLoading);
+    const error = useSelector((store)=> store.todo.error);
 
-function App() { 
-    const {count,isLoading} = useStore();
+    useEffect(()=>{
+        dispatch(getTodo())
+    },[dispatch])
+
     return (
         <>
-        {isLoading ? (<p>loading...</p>) : 
-        (
-            <>
+            {isLoading ? (<p>loading....</p>) : null}
+            {error ? (<p style={{color:"red"}}>{error}</p>) : null}
             <p>Hello World!{count}</p>
-            <Calculate/>
-            </>
-        )}
+            <button onClick={()=> dispatch(changeTheme())}>Change Theme</button>
+            <p>Theme: {themeValue}</p>
+
+            <button onClick={()=> dispatch(getTodo())}>Get Todo List</button>
+
+
+            <Calculate />
         </>
     )
 }
 
-function Calculate(){
-    const [num, setNum]= useState(0);
+function Calculate() {
+    const count = useSelector((store) => store.counter.count);
+    const [num, setNum] = useState(0);
+    const isLoading = false;
+    const dispatch = useDispatch();
 
-    const {
-        count, 
-        increment, 
-        decrement,
-        manuelIncrement,
-        incrementAsync,
-        isLoading
-    } = useStore();
-
-    function checkLoading(){
-        if(isLoading){
-            return(<p>loading...</p>)
-        }else{
-            return(
+    function checkLoading() {
+        if (isLoading) {
+            return (<p>loading...</p>)
+        } else {
+            return (
                 <>
-                <input onChange={(e)=> setNum(e.target.value)} />
-                    <button onClick={increment}>+</button> 
-                    <button onClick={decrement}>-</button> 
-                    <button onClick={()=> manuelIncrement(+num)}>+{num}</button> 
-                    <button onClick={incrementAsync}>+Async</button> 
+                    <input onChange={(e) => setNum(e.target.value)} />
+                    <button onClick={() => dispatch(increment())}>+</button>
+                    <button onClick={() => dispatch(decrement())}>-</button>
+                    <button onClick={()=> dispatch(incrementByValue(+num))}>+{num}</button> 
+                    {/* <button onClick={incrementAsync}>+Async</button>  */}
                 </>
             )
         }
     }
 
-    return(
+    return (
         <>
-        <p>Calculate App</p>  
-        <p>{count}</p> 
-        {checkLoading()}
+            <p>Calculate App</p>
+            <p>{count}</p>
+            {checkLoading()}
         </>
-        
+
     )
 }
 
