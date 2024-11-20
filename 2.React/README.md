@@ -122,6 +122,7 @@ function App() {
 - React Redux için <a href="https://react-redux.js.org/" target="_blank">buraya tıklayın</a>
 - React Tanstack Query için <a href="https://tanstack.com/query/latest" target="_blank">buraya tıklayın</a>
 - React Formik için <a href="https://formik.org/" target="_blank">buraya tıklayın</a>
+- React Hook Form için <a href="https://react-hook-form.com/" target="_blank">buraya tıklayın</a>
 
 ## Kurulumlar
 Node.JS kurulumu için <a href="https://nodejs.org/en" target="_blank">buraya tıklayın</a>
@@ -161,6 +162,13 @@ Formik
 npm install formik
 # For validation
 npm install yup
+```
+
+React Hook Form
+```powershell
+npm install react-hook-form
+# For validation
+npm install zod
 ```
 
 proxy
