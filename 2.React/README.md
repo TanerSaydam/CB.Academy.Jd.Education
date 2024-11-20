@@ -1,5 +1,16 @@
 # React Eğitim İçeriği ve Ders Programı
 
+## 20.11.2024
+- [x] State Management
+	- [x] Redux Toolkit
+		- [x] Provider
+		- [x] createSlice
+		- [x] configureStore
+		- [x] createAsyncThunk		
+		- [x] Hooks			
+			- [x] useSelector
+- [x] React Tanstack Query (Axios, Fetch)
+
 ## 19.11.2024
 - [x] proxy
 - [x] State Management
@@ -51,35 +62,6 @@
 - [x] React Hooks
 	- [x] useEffect
 
-## State Management
-- [x] State Management
-	- [ ] Redux Toolkit
-		- [ ] Provider
-		- [ ] createSlice
-		- [ ] configureStore
-		- [ ] createAsyncThunk
-		- [ ] createApi
-		- [ ] Hooks			
-			- [ ] useSelector
-
-## Libraries
-- [ ] React Tanstack Query (Axios, Fetch)
-- [ ] React Formik
-
-## Hooks
-- [ ] React Hooks
-	- [ ] useMemo
-	- [ ] useRef
- 	- [ ] useCallback
- 	- [ ] useLayoutEffect
- 	- [ ] useImperativeHandle
- 	- [ ] useTransition (React 18 ve sonrası)
- 	- [ ] useDeferredValue (React 18 ve sonrası)
- 	- [ ] useId (React 18 ve sonrası)
- 	- [ ] useSyncExternalStore (React 18 ve sonrası)
- 	- [ ] useInsertionEffect (React 18 ve sonrası)
-
-- [ ] Zod - React Hook Form
 ```jsx
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

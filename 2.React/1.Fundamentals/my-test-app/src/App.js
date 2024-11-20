@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, incrementByValue } from "./features/Counter/count";
 import { changeTheme } from "./features/theme";
 import { getTodo } from "./features/todo";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import axios from "axios";
 
 function App() {
     const count = useSelector((store) => store.counter.count);
@@ -19,16 +21,17 @@ function App() {
 
     return (
         <>
-            {isLoading ? (<p>loading....</p>) : null}
+            {/* {isLoading ? (<p>loading....</p>) : null}
             {error ? (<p style={{color:"red"}}>{error}</p>) : null}
             <p>Hello World!{count}</p>
             <button onClick={()=> dispatch(changeTheme())}>Change Theme</button>
             <p>Theme: {themeValue}</p>
 
-            <button onClick={()=> dispatch(getTodo())}>Get Todo List</button>
+            <button onClick={()=> dispatch(getTodo())}>Get Todo List</button> */}
 
-
-            <Calculate />
+            <Todo/>
+{/* 
+            <Calculate /> */}
         </>
     )
 }
@@ -62,6 +65,45 @@ function Calculate() {
             {checkLoading()}
         </>
 
+    )
+}
+
+async function getTodos() {
+    await new Promise(res => setTimeout(res,1000));
+    const result = await axios.get("https://jsonplaceholder.typicode.com/todos");
+
+    return result.data;
+}
+
+function Todo(){
+    const queryClient = useQueryClient();
+    const {data,isLoading,refetch, error} = useQuery({
+        queryKey: ["todo"],
+        queryFn: getTodos,
+        enabled: false,
+        staleTime: 0,        
+    });
+    
+    function getAll(){
+        queryClient.removeQueries("todo");
+        refetch();
+    }
+
+    if(isLoading){
+        return <p>loading...</p>
+    }
+
+    if(error){
+        return <p>{error.message}</p>
+    }
+
+    return(
+        <>
+        <button onClick={getAll}>Get Todo List</button>
+            <ul>
+                {data?.map((val, i) => <li key={i}>{val.title}</li>)}
+            </ul>
+        </>
     )
 }
 
