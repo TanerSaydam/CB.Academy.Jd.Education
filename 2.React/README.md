@@ -169,6 +169,7 @@ React Hook Form
 npm install react-hook-form
 # For validation
 npm install zod
+npm install @hookform/resolvers
 ```
 
 proxy
