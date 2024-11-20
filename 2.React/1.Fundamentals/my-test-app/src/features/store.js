@@ -9,4 +9,4 @@ export const store = configureStore({
         theme: themeSlice.reducer,
         todo: todoSlice.reducer
     }
-})
+});

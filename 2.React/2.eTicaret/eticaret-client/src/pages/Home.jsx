@@ -2,12 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { api } from "../constants";
 import { formatCurrency } from "../utilities/format";
-import { useCountStore } from "../features/useCountStore";
+import { useDispatch } from "react-redux";
+import { increment } from "../features/count";
 
 function Home(){
 	const [products, setProducts] = useState([]);
 	const [orgProducts, setOrgProducts] = useState([]);
-	const {increment} = useCountStore();
+	const dispatch = useDispatch();
+
 	async function getAll() {
 		try {
 			var result = await axios.get(`${api}/api/products`);
@@ -42,7 +44,7 @@ function Home(){
 			};
 
 			await axios.post(`${api}/api/shoppingcarts`, data);
-			increment()
+			dispatch(increment());
 		} catch (error) {
 			console.log(error);		
 		}

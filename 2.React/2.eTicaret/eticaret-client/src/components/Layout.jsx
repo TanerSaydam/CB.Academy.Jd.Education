@@ -1,10 +1,12 @@
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { useCountStore } from "../features/useCountStore";
+import { useDispatch, useSelector } from "react-redux";
+import { getCount } from "../features/count";
 
 function Layout() {
 	const navigate = useNavigate();
-	const {count, isLoading, getCount} = useCountStore();
+	const {count, isLoading, error} =  useSelector((store)=> store.counter);
+	const dispatch = useDispatch();
 
 	function signOut(){
 		localStorage.clear();
@@ -12,8 +14,8 @@ function Layout() {
 	}
 
 	useEffect(()=>{
-		getCount();
-	},[getCount])
+		dispatch(getCount());
+	},[dispatch])
 
 	return (
 		<div className="container">

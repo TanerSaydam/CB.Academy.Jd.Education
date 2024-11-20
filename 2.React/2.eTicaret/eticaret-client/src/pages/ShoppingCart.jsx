@@ -2,11 +2,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { api } from "../constants";
 import { formatCurrency } from "../utilities/format";
-import { useCountStore } from "../features/useCountStore";
+import { useDispatch } from "react-redux";
+import { decrement } from "../features/count";
+
 function ShoppingCart(){
 	const [carts, setCarts] = useState([]);
 	const [total, setTotal] = useState(0);
-	const {decrement} = useCountStore();
+	const dispatch = useDispatch();
 
 	async function getAll() {
 		try {
@@ -39,7 +41,7 @@ function ShoppingCart(){
 			if(result){
 				await axios.delete(`${api}/api/shoppingcarts?id=${id}`);
 				getAll();
-				decrement()
+				dispatch(decrement())
 			}			
 		} catch (error) {
 			console.log(error);			
