@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, incrementByValue } from "./features/Counter/count";
 import { changeTheme } from "./features/theme";
@@ -105,6 +105,39 @@ function Todo(){
             </ul>
         </>
     )
+}
+
+const initialState = {
+    count: 0,
+    isLoading: false
+}
+
+const reducer = (state, action)=>{
+    
+    if(action.type=== "increment"){
+        return {count: state.count + 1, isLoading: state.isLoading}
+    }else if(action.type === "change-loading"){
+        return {count: state.count, isLoading: !state.isLoading}
+    }
+}
+
+export function MyCountReducer(){
+    const [state, dispatch] = useReducer(reducer, initialState)
+    const increment =()=>{
+        dispatch({type: "increment"});
+    }
+    
+    return(
+        <>
+            <p>Count: {state.count}</p>
+            <button onClick={increment}>+</button>
+            <hr/>
+            <p>Is Loading: {state.isLoading ? 'Active' : 'Passive'}</p>
+            <button onClick={()=> dispatch({type: "change-loading"})}>Change Loading</button>
+        </>
+    )
+       
+    
 }
 
 export default App;
