@@ -1,14 +1,15 @@
 'use client'
 
 import Product from "@/components/product";
+import { useStore } from "@/features/store";
 import { api } from "@/utilities/contants";
-import { formatCurrency } from "@/utilities/format";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function Home(){
     const [products, setProducts] = useState([]);
 	const [orgProducts, setOrgProducts] = useState([]);
+    const {increment} = useStore();
 
 	async function getAll() {
 		try {
@@ -43,8 +44,8 @@ export default function Home(){
 				quantity: 1
 			};
 
-			await axios.post(`${api}/api/shoppingcarts`, data);
-			//dispatch(increment());
+			//await axios.post(`${api}/api/shoppingcarts`, data);
+			increment();
 		} catch (error) {
 			console.log(error);		
 		}

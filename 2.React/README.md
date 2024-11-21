@@ -1,5 +1,12 @@
 # React Eğitim İçeriği ve Ders Programı
 
+## 21.11.2024
+- [x] Next.JS nedir?
+- [x] Next.JS i tanıyalım
+- [x] App Route
+- [x] eTicaret React projemizi NextJS projemize alalım
+- [ ] Ödev: React eTicaret projemizdeki Shopping Cart, Order ve Products sayfasını NextJS projemize taşıyalım
+
 ## 20.11.2024
 - [x] State Management
 	- [x] Redux Toolkit
