@@ -1,5 +1,10 @@
 # React Eğitim İçeriği ve Ders Programı
 
+## 22.11.2024
+- [x] Ödev: React eTicaret projemizdeki Shopping Cart, Order ve sayfasını NextJS projemize taşıyalım
+- [x] Tüm porjemizdeki verileri MongoDb ye aldık(docker da ayağa kaldırdığımız)
+- [x] NextJS Form elementini kısaca inceledik
+
 ## 21.11.2024
 - [x] Next.JS nedir?
 - [x] Next.JS i tanıyalım
@@ -137,6 +142,11 @@ module.exports = function(app) {
     })
   );
 };
+```
+
+- Mongoose kütüphanesi kurulum kodu
+```powershell
+npm install mongoose
 ```
 
 - NextJS MongDb connection file: lib/db.js
