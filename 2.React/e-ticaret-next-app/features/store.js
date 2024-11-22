@@ -11,7 +11,7 @@ export const useStore = create((set) => ({
     get: async () => {
         set(() => ({ isLoading: true }))
         try {
-            var result = await axios.get(`${api}/api/ShoppingCarts/count`);
+            var result = await axios.get(`/api/shopping-carts/get-count`);
             set(() => ({ count: result.data, isLoading: false }))
         } catch (error) {
             set(() => ({ error: result.error.message, isLoading: false }))

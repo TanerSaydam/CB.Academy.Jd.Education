@@ -10,7 +10,7 @@ export default function Product({ val, addShoppingCart }) {
                 </div>
                 <div className="card-body text-center">
                     <h6 className="text-success">{formatCurrency(val.price)}</h6>
-                    <button onClick={() => addShoppingCart(val.id)} className="btn btn-success">
+                    <button onClick={() => addShoppingCart(val._id)} className="btn btn-success">
                         <i className="fa-solid fa-cart-plus me-1 fa-bounce"></i>
                         Sepete Ekle
                     </button>

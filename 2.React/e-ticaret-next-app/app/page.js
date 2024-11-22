@@ -37,13 +37,12 @@ export default function Home(){
 
 	async function addShoppingCart(productId) {
 		try {
-			debugger
 			const data = {
 				productId: productId,
 				quantity: 1
 			};
 
-			await axios.post(`${api}/api/shoppingcarts`, data);
+			await axios.post(`/api/home/add-shopping-cart`, data);
 			increment();
 		} catch (error) {
 			console.log(error);		

@@ -13,7 +13,7 @@ export default function ShoppingCart(){
 
 	async function getAll() {
 		try {
-			var result = await axios.get(`${api}/api/shoppingcarts`);
+			var result = await axios.get(`/api/shopping-carts`);
 			setCarts(result.data);
 
 			let total = 0;
