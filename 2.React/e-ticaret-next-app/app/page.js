@@ -44,7 +44,7 @@ export default function Home(){
 				quantity: 1
 			};
 
-			//await axios.post(`${api}/api/shoppingcarts`, data);
+			await axios.post(`${api}/api/shoppingcarts`, data);
 			increment();
 		} catch (error) {
 			console.log(error);		

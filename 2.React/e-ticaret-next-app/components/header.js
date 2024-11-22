@@ -46,12 +46,12 @@ export function Header(){
 									Ana Sayfa
 								</Link>
 							</li>
-							<li className="nav-item">
+							{/* <li className="nav-item">
 								<Link className={pathName=== "/products" ? 'nav-link active' : 'nav-link'} href="/products">
 									<i className="fa-solid fa-box me-1"></i>
 									Ürünler
 								</Link>
-							</li>
+							</li> */}
 							<li className="nav-item">
 								<Link className={pathName==="/orders" ? 'nav-link active' : 'nav-link'} href="/orders">
 									<i className="fa-solid fa-file me-1"></i>
@@ -59,7 +59,7 @@ export function Header(){
 								</Link>
 							</li>
 						</ul>
-						<button type="button" onClick={()=> navigate("/shopping-carts")} className="btn btn-primary position-relative">
+						<button type="button" onClick={()=> router.push("/shopping-carts")} className="btn btn-primary position-relative">
 							<i className={"fa-solid fa-shopping-cart me-1 " + (count > 0 ? 'fa-beat' : '')}></i>
 							Sepetim
 							<span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
