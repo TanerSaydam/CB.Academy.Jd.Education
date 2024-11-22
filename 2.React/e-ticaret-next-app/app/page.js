@@ -13,9 +13,9 @@ export default function Home(){
 
 	async function getAll() {
 		try {
-			var result = await axios.get(`${api}/api/products`);
-			setProducts(result.data.data);
-			setOrgProducts(result.data.data);
+			var result = await axios.get(`/api/products`);
+			setProducts(result.data);
+			setOrgProducts(result.data);
 		} catch (error) {
 			console.log(error);			
 		}
@@ -28,7 +28,6 @@ export default function Home(){
 
 	useEffect(()=> {
 		getAll();
-
 		return ()=> {
 			setProducts([])
 			setOrgProducts([])
